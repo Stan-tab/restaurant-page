@@ -45,6 +45,7 @@ header li{
 
 .scary{
     font-family: horror;
+    color: rgb(155, 0, 0);
 }
 
 .opener{
@@ -97,6 +98,50 @@ ul > .visible{
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 30px;
     margin: 2vw;
+}
+
+.card{
+    width: 45vw;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 15px;
+    color: rgb(243, 174, 174);
+    background-color: rgb(48, 26, 26);
+    border-radius: 30px;
+    border: 2px solid rgb(109, 11, 11);
+    margin-top: 5vh;
+}
+
+.card h3{
+    margin: 0;
+    text-align: right;
+    padding-right: 3vw;
+    color: rgb(155, 0, 0);
+}
+
+.card h2.scary{
+    margin: 0 0 5px 0;
+    padding-left: 2rem;
+}
+
+.card.hours{
+    padding-bottom: 25px;
+}
+
+.card.hours > p {
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.card.location h2{
+    margin: 0;
+}
+
+.card.location p {
+    margin: 5px 0 0 0;
+    text-align: center;
+    padding-left: 60px;
 }
 
 @media(max-width: 785px) {
