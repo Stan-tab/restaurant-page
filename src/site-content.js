@@ -1,4 +1,3 @@
-// There i will write the content of html
 const container = document.querySelector("#container");
 const mainBox = document.createElement("div");;
 mainBox.classList = "mainBox";
