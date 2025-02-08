@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
-const mainBox = document.createElement("div");
 const navBut = [...document.querySelectorAll("header>nav>ul>li")]
+const mainBox = document.createElement("div");
 mainBox.classList = "mainBox";
 container.appendChild(mainBox);
 

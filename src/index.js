@@ -19,4 +19,4 @@ navBut.forEach(el => {
     })
 });
 
-home.render();
+// home.render();

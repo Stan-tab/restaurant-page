@@ -101,6 +101,14 @@ ul > .visible{
     margin: 2vw;
 }
 
+.opener + .card{
+    margin-top: 15px;
+}
+
+.card + .opener{
+    margin-top: 35px;
+}
+
 .card{
     width: 45vw;
     max-width: 420px;
@@ -111,6 +119,23 @@ ul > .visible{
     border-radius: 30px;
     border: 2px solid rgb(109, 11, 11);
     margin-top: 5vh;
+}
+
+.card img{
+    position: relative;
+    width: 100%;
+    outline: 3px dashed rgb(187, 30, 30);
+    &+p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0rem;
+        &+p {
+            text-align: right;
+            padding-right: 25px;
+            margin: 0;
+        }
+    }
 }
 
 .card h3{
@@ -156,8 +181,10 @@ ul > .visible{
         margin-bottom: 10px;
         border-radius: 0;
     }
-
     .card {
         width: 70vw;
+    }
+    .card.img{
+        width: 60vw;
     }
 }
