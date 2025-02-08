@@ -67,6 +67,7 @@ header li{
 
 .drips{
     position: absolute;
+    z-index: 1;
     left: -3px;
     top: 85%;
     width: 99.813px;
@@ -87,7 +88,7 @@ ul > .visible{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position-x: center;
+    background-position: center;
     display: grid;
     grid-template-columns: 0.6fr 3fr 0.6fr;
     min-height: 100vh;
@@ -152,6 +153,11 @@ ul > .visible{
     #container > .mainBox {
         grid-column: 1/2;
         margin: 0;
+        margin-bottom: 10px;
         border-radius: 0;
+    }
+
+    .card {
+        width: 70vw;
     }
 }
