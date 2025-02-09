@@ -11,6 +11,11 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url("../assets/pumpkin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header{
@@ -84,11 +89,6 @@ ul > .visible{
 }
 
 #container {
-    background-image: url("../assets/pumpkin.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     display: grid;
     grid-template-columns: 0.6fr 3fr 0.6fr;
     min-height: 100vh;
