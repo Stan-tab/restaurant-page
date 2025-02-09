@@ -1,8 +1,9 @@
 import "./style.css"
-import {homePage, menuPage, navBut, mainBox} from "./site-content.js"
+import {homePage, menuPage, navBut, contactPage} from "./site-content.js"
 
-const home = new homePage()
-const menu = new menuPage()
+const home = new homePage();
+const menu = new menuPage();
+const contact = new contactPage();
 
 navBut.forEach(el => {
     const child = el.children[0];
@@ -14,13 +15,16 @@ navBut.forEach(el => {
         });
         el.classList = "visible";
         child.classList = "visible drips";
-        mainBox.replaceChildren("");
         if(el.value == 0) {
             home.render();
         } else if(el.value == 1) {
-            menu.render()
+            menu.render();
+        } else if(el.value == 2) {
+            contact.render();
         }
     })
 });
 
+contact.render();
+menu.render();
 home.render();

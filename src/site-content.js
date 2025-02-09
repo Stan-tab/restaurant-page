@@ -76,6 +76,7 @@ class homePage{
     }) ()
 
     render() {
+        mainBox.replaceChildren("");
         mainBox.appendChild(this._divs.opener);
         mainBox.appendChild(this._divs.card1);
         mainBox.appendChild(this._divs.card2);
@@ -84,7 +85,7 @@ class homePage{
 }
 
 class menuPage{
-    creator = (el = "div", cls = "",times = 1) => {
+    creator (el = "div", cls = "",times = 1) {
         const obj = {};
         for(let i = 0; i<times; i++){
             obj[el+i] = document.createElement(el);
@@ -105,7 +106,7 @@ class menuPage{
         }
     })()
 
-    fastering = (obj, childObj, name, rep = 1) => {
+    fastering (obj, childObj, name, rep = 1) {
         let indexer = 0;
         if(rep >= 2){
             for (let el in obj){
@@ -158,10 +159,11 @@ class menuPage{
         this.fastering(this._cards, this._imgs, "img");
         this.fastering(this._cards, this.__paras, "p", 2);
         this._cards.div4.appendChild(this.__paras.p8);
-        this._cards.div4.appendChild(this.__paras.p9);
+        this._cards.div5.appendChild(this.__paras.p9);
     })()
 
     render() {
+        mainBox.replaceChildren("");
         mainBox.appendChild(this._openers.div0);
         mainBox.appendChild(this._openers.div1);
         mainBox.appendChild(this._cards.div0);
@@ -176,4 +178,51 @@ class menuPage{
     }
 }
 
-export {homePage, menuPage, navBut, mainBox};
+class contactPage extends menuPage{
+    _cntOpeners = super.creator("div", "opener contact", 3);
+    
+    _cntFirstOp = document.createElement("div");
+    _cntH1Ops = document.createElement("h1");
+
+    _cntDivs = super.creator("div", "scary", 3);
+
+    _cntOpParas = super.creator("p", "scary", 3);
+    _cntParas = super.creator("p", "", 9);
+    
+
+    giveProps = (() => {
+        this._cntFirstOp.classList = "scary opener";
+        this._cntH1Ops.classList = "scary";
+        this._cntH1Ops.textContent = "Contact us";
+
+        this._cntOpParas.p0.textContent = "Serial killer";
+        this._cntOpParas.p1.textContent = "Satan";
+        this._cntOpParas.p2.textContent = "Succubus";
+        
+        this._cntParas.p0.textContent = "Chef";
+        this._cntParas.p1.textContent = "777-777-7777";
+        this._cntParas.p2.textContent = "cruelChef@hell.com";
+        this._cntParas.p3.textContent = "Manager";
+        this._cntParas.p4.textContent = "666-666-6666";
+        this._cntParas.p5.textContent = "yourLife@hell.com";
+        this._cntParas.p6.textContent = "Waiter";
+        this._cntParas.p7.textContent = "888-888-8888";
+        this._cntParas.p8.textContent = "imnotdanger@hell.com"; 
+
+        this._cntFirstOp.appendChild(this._cntH1Ops);
+
+        super.fastering(this._cntDivs, this._cntOpParas, "p");
+        super.fastering(this._cntDivs, this._cntParas, "p", 3);
+        super.fastering(this._cntOpeners, this._cntDivs, "div");
+    })()
+
+    render() {
+        mainBox.replaceChildren("");
+        mainBox.appendChild(this._cntFirstOp);
+        mainBox.appendChild(this._cntOpeners.div0);
+        mainBox.appendChild(this._cntOpeners.div1);
+        mainBox.appendChild(this._cntOpeners.div2);
+    }
+}
+
+export {homePage, menuPage, contactPage, navBut,};

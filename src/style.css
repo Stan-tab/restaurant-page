@@ -105,6 +105,26 @@ ul > .visible{
     margin-top: 15px;
 }
 
+div.scary > p.scary {
+    font-family: horror;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contact {
+    width: 40vw;
+}
+
+div.scary > p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 8vw;
+    padding-right: 10px;
+    color: rgb(243, 174, 174);
+}
+
 .card + .opener{
     margin-top: 35px;
 }
@@ -181,7 +201,7 @@ ul > .visible{
         margin-bottom: 10px;
         border-radius: 0;
     }
-    .card {
+    .card, .contact {
         width: 70vw;
     }
     .card.img{
